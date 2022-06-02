@@ -1,6 +1,13 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
-    <img src="../../../assets/retriver.jpg " class="logo">
-    <a id="paws">Paws makes your life better</a>
+    <!-- <img src="../../../assets/retriver.jpg " class="logo"> -->
+  <div class="col-span-md-6" id="paws">
+    <i class="fa-solid fa-paw" style="color: white;font-size:40px;"></i>
+      <section id="logo">Paws 
+        <small style="color: white;font-size:large;">makes your life better</small>
+      </section>
+  </div>
+    
+    
     <!-- Toggle button-->
     <a class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -15,12 +22,9 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/about">About</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/contact">Contact Us</a>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    
+        <li class="nav-item dropdown" *ngIf="loggedIn">
+          <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
             Service
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -29,18 +33,28 @@
             <a class="dropdown-item" routerLink="/product-input">product input</a>
           </div>
         </li>
-
-        <li class="nav-item dropdown">
+       
+        <li class="nav-item">
+          <a class="nav-link" (click)="onClicklogout()" *ngIf="loggedIn">log out</a>
+        </li>
+        
+        <li class="nav-item dropdown" *ngIf="!loggedIn">
           <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Join Us
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" routerLink="/signin">Sign In</a>
             <a class="dropdown-item" routerLink="/signup">Sign Up</a>
-            <a class="dropdown-item" (click)="onClicklogout()">logout</a>
           </div>
         </li>
-        
+
+        <li>        
+          <div class="cart" routerLink="/cart">
+          <i class="fas fa-cart-plus"></i>
+          <div style="font-size: 10px;" class="badge bg-danger"></div>
+          </div>
+      </li>
+
       </ul>
       
     </div>

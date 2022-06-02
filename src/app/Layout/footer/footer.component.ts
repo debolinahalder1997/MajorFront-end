@@ -12,11 +12,6 @@ export class FooterComponent implements OnInit {
   constructor(private store:StorageService,
     private router:Router) { }
 
-    onClicklogout(){
-      this.store.removetoken()
-      this.router.navigate(['/signin'])
-  }
-
   ngOnInit(): void {
   }
 

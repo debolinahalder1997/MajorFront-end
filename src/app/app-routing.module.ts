@@ -4,6 +4,7 @@ import { AuthGuard } from './auth.guard';
 import { AboutComponent } from './Components/about/about.component';
 import { SignInComponent } from './Components/Auth/sign-in/sign-in.component';
 import { SignUpComponent } from './Components/Auth/sign-up/sign-up.component';
+import { CartComponent } from './Components/cart/cart.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { GetProductComponent } from './Components/get-product/get-product.component';
 import { HomeComponent } from './Components/home/home.component';
@@ -23,7 +24,7 @@ const routes: Routes =
   {path:'product-input',component:ProductInputComponent},
   {path:'get-product',component:GetProductComponent},
   {path:'update/:id',component:UpdateComponent},
-
+  {path:'cart',component:CartComponent},
   {path:'**',component:PageNotFoundComponent}
 ];
 

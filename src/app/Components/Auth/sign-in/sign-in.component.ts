@@ -16,7 +16,11 @@ export class SignInComponent implements OnInit {
 
    constructor(private authService:AuthenticationService,
     private router:Router,
-    private store:StorageService) { }
+    private store:StorageService) {
+      if (localStorage.getItem('token')) {
+        router.navigate(['/home']);
+      }
+     }
 
   ngOnInit(): void { }
 loginResponse:any;
@@ -27,7 +31,8 @@ loginResponse:any;
       console.log(response);
       this.loginResponse = response
       this.store.SetResponseFromLogin(this.loginResponse.token)
-      this.router.navigate(['/product'])
+      this.router.navigate(['/home'])
+      window.location.reload();
     })
     }
 

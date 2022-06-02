@@ -15,6 +15,7 @@ import { PageNotFoundComponent } from './Layout/page-not-found/page-not-found.co
 import { ProductInputComponent } from './Components/product-input/product-input.component';
 import { GetProductComponent } from './Components/get-product/get-product.component';
 import { UpdateComponent } from './Components/update/update.component';
+import { CartComponent } from './Components/cart/cart.component';
 
 
 
@@ -32,6 +33,7 @@ import { UpdateComponent } from './Components/update/update.component';
     ProductInputComponent,
     GetProductComponent,
     UpdateComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

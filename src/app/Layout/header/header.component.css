@@ -1,0 +1,31 @@
+#paws{
+    font-size:x-large;
+    font-weight:600;
+    color: aliceblue;
+    font-family: Poppins;
+    display: flex;
+    flex-direction: column;
+}
+.logo{ 
+    width: 130px;;
+   height: 90px;
+}
+
+.nav-link{
+    color:whitesmoke !important;
+    margin: 6px!important;
+    font-size:large;
+    font-family: Poppins;
+}
+.navbar-brand{
+    color: bisque;
+}
+.navbar{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(7, 7, 7);
+} 
+
+.dropdown-item{
+    font-family: Poppins;
+}

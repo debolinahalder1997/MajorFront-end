@@ -1,0 +1,46 @@
+
+<div class="container-fluid main-content">
+   <div class="row text-center form2">
+      <div class="col-md-6 text-center company__info">
+         <h4>Keen observation<br><br>of nature's movement <br><br>reveals the truth<br><br> of love</h4>
+      </div>
+      <div class="col-md-6 col-xs-12 col-sm-12 login_form ">
+         <!-- <div class="container-fluid" id="form2"> -->
+            <div>
+               <br>
+               <h2>Sign up</h2>
+               <hr>
+            </div>
+            <div class="row">
+               <form  class="form-group" [formGroup]="signUpValue" (submit)="register()">
+                  <div class="row">
+                     <div class="col-sm-6">
+                        <input type="text" name="firstname" formControlName="firstname"   id="firstname" class="form__input" placeholder="First Name" required>
+                        <div class="alert alert-warning" role="alert" *ngIf="signUpValue.controls['firstname'].hasError('maxLength')">This field is required</div>
+                     </div>
+                     <div class="col-sm-6">
+                        <input type="text" name="lastname" formControlName="lastname"  id="lastname" class="form__input" placeholder="Last Name" required>
+                        <div class="alert alert-warning" role="alert" *ngIf="signUpValue.controls['lastname'].hasError('maxLength')">This field is required</div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <input type="email" name="email" formControlName="email"  id="email" class="form__input" placeholder="Email" required>
+                     <div class="alert alert-warning" role="alert" *ngIf="signUpValue.controls['email'].invalid && signUpValue.controls['email'].touched" class="alert alert-danger"> Please enter the email correctly</div>
+                  </div>
+                  <div class="row">
+                     <!-- <span class="fa fa-lock"></span> -->
+                     <input type="password"  name="password" formControlName="password" id="password" class="form__input" placeholder="Password" required>
+                     <!-- <div class="alert alert-warning" role="alert" *ngIf="signUpValue.controls['password'].hasError('pattern')">This field is required</div> -->
+                  </div>
+                  <div>
+                     <input type="submit" value="Submit" class="btn">
+                  </div>
+               </form>
+            </div>
+            <div>
+               <p>Already have an account? <a routerLink="/signin">Sign In</a></p>
+            <!-- </div> -->
+         </div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="section">
+   <div class="container product" id="formstyle"><br>
+      <h3>product update</h3>
+      <hr>
+
+      <form class="form-group" [formGroup]="ProductValue" (submit)="pdtupdate()" enctype="multipart/form-data"
+         *ngIf="value">
+
+
+         <div class="row">
+            <input type="text" name="title" formControlName="title" id="title" class="form__input"
+               placeholder="product title" required>
+            <div class="alert alert-warning" role="alert"
+               *ngIf="ProductValue.controls['title'].hasError('maxLength') && ProductValue.controls['title'].touched">
+               This field is required.
+            </div>
+         </div>
+
+
+         <div class="row">
+            <input type="Address" name="description" formControlName="description" id="description" class="form__input"
+               placeholder="product description" required>
+            <div class="alert alert-warning" role="alert"
+               *ngIf="ProductValue.controls['description'].hasError('maxLength') && ProductValue.controls['description'].touched">
+               This field is required.
+            </div>
+         </div>
+
+         <div class="row">
+            <!-- Here i have bind the event called (change) to get the productIMG data as an event response(By srijan)  -->
+            <input type="file" name="ProductImg" formControlName="ProductImg" id="ProductImg" class="form__input"
+               (change)="onFileChange($event)" required>
+            <!-- Here i have bind the event called (change) to get the productIMG data as an event response(By srijan)   -->
+         </div>
+
+         <div class="row">
+            <input type="number" name="ProductPrice" formControlName="ProductPrice" id="ProductPrice"
+               class="form__input" placeholder="product price" required>
+            <div class="alert alert-warning" role="alert"
+               *ngIf="ProductValue.controls['ProductPrice'].invalid && ProductValue.controls['ProductPrice'].touched">
+               This field is required.
+            </div>
+         </div>
+
+         <div class="row">
+            <input type="text" name="category" formControlName="category" id="category" class="form__input"
+               placeholder="product category" required>
+            <div class="alert alert-warning" role="alert"
+               *ngIf="ProductValue.controls['category'].hasError('maxLength') && ProductValue.controls['category'].touched">
+               This field is required.
+            </div>
+         </div>
+         <br>
+         <div class="row" id="submit">
+            <input type="submit" value="Submit" class="btn">
+         </div>
+
+      </form>
+
+   </div>
+</div>

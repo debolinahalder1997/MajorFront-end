@@ -1,0 +1,54 @@
+h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color:whitesmoke;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4,p{
+    font-size: 19px;
+    line-height: 1.375em;
+    color:whitesmoke;
+    font-weight: 400;
+  }  
+  .container-fluid {
+    padding: 60px 50px;
+    background-image: linear-gradient(rgba(46, 44, 44, 0.5), rgba(31, 29, 29, 0.5)), url(../../../assets/home.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .bg-image {
+    /* The image used */
+   
+  
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  body, html {
+    height: 100%;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+#cat{
+    width:350px;
+    height:300px;
+    border-radius:50px;
+    justify-content: left;
+}
+  .image{
+    height: 75%;
+    width: 88%;
+    border-radius:50px;
+  }

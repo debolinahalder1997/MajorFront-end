@@ -1,0 +1,32 @@
+<div class="body">
+<h2>Product list</h2>
+<div *ngFor="let item of pdt">
+  <div class="card mb-5 w-75">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src={{item.ProductImg}} class="card-img img-fluid" style="height: 300px;width:300px;">
+      </div>
+
+      <div class="col-md-8">
+        <div class="card-body">
+
+          <h2 class="card-title"><b>productTitle:</b>{{ item.title }}</h2><hr>
+            <p class="card-text"><b>product description:</b>{{item.description}}</p><hr><br>
+            <div class="row">
+              <div class="col-md-8">
+                <p class="card-text"><b>Product Price:</b>{{item.ProductPrice}}</p>
+                <p class="card-text"><b>product category:</b>{{item.category}}</p>
+              </div>
+              <div class="col-md-4" id="button">
+                <button class="btn btn-info" type="button" routerLink="/update/{{item._id}}">update</button><br><br>
+                <button class="btn btn-danger" type="submit" (click)="Delete(item._id)">delete</button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

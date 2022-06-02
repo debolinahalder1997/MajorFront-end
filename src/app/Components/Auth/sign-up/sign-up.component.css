@@ -1,0 +1,94 @@
+.main-content{
+	width:100%;
+	height: 100%;
+	display: flex;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	justify-content: center;
+	background-image: url(../../../../assets/1751008.webp);
+	background-size: cover;
+	background-attachment: fixed;
+}
+.company__info{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../../../../assets/betta.jpg); 
+	background-size:contain;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	color: rgb(248, 248, 248);
+}
+.fa-android{
+	font-size:3em;
+}
+@media screen and (max-width: 640px) {
+	.main-content{width: 90%;}
+	.company__info{
+		display: none;
+	}
+	.login_form{
+		border-top-left-radius:20px;
+		border-bottom-left-radius:20px;
+	}
+}
+@media screen and (min-width: 642px) and (max-width:800px){
+	.main-content{width: 70%;}
+}
+.row > h2{
+	color:#000000;
+  padding-left: 25px;
+}
+.login_form{
+	color: #fff;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../../../../assets/texture.jpg);
+	background-size:cover;
+}
+
+form{
+	padding: 0 2em;
+}
+.form__input{
+	width: 100%;
+	border:0px solid transparent;
+	border-radius: 0;
+	border: 1px solid #aaa;
+	padding: 1em .5em .5em;
+	padding-left: 2em;
+	outline:none;
+	margin:1.5em auto;
+	transition: all .5s ease;
+	box-shadow: 0 0 5px rgba(7, 7, 7, 0.5);
+}
+.form__input:hover{
+	border-color: #090a0a;
+	 
+	border-radius: 4px;
+}
+.btn{
+	transition: all .5s ease;
+	width: 70%;
+	border-radius: 30px;
+	color:#060707;
+	font-weight: 600;
+	background-color: #fff;
+	border: 1px solid #008080;
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+}
+.btn:hover, .btn:focus{
+	background-color: #030303;
+	color:#fff;
+}
+
+.form2{
+	width:700px;
+	max-height: fit-content;
+	height: 550px;
+	margin-top:20px;
+	margin-bottom: 20px;
+}

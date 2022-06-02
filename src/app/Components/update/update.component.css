@@ -1,0 +1,92 @@
+.section{
+	background-image: url('../../../assets/background.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+	margin:0 0 0 0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.main-content{
+	width: 50%;
+	border-radius: 20px;
+	box-shadow: 0 5px 5px rgba(0,0,0,.4);
+	margin: 5em auto;
+	display: flex;
+	
+}
+.company__info{
+	background-color: #000000;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #fff;
+	
+}
+
+.product{
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+
+h3{
+	text-align: center;
+}
+
+form{
+	padding:0 2em 2em 2em;
+    max-height: fit-content;
+}
+
+.form__input{
+	width: 100%;
+	border:0px solid transparent;
+	border-radius: 0;
+	border-bottom: 1px solid #aaa;
+	padding: 1em .5em .5em;
+	outline:none;
+	margin:1.5em auto;
+}
+.form__input:focus{
+	border-bottom-color: #090a0a;
+	box-shadow: 0 0 5px rgba(3, 66, 66, 0.4); 
+	border-radius: 4px;
+}
+
+
+
+.btn{
+	transition: all .5s ease;
+	width: 70%;
+	border-radius: 30px;
+	color:#060707;
+	font-weight: 600;
+	background-color: #fff;
+	border: 1px solid #008080;
+	padding: auto;
+}
+.btn:hover, .btn:focus{
+	background-color: #030303;
+	color:#fff;
+}
+#formstyle{
+	position: relative;
+	width: fit-content;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: aliceblue;
+}
+#submit{
+    display: flex;
+    justify-content: center;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}

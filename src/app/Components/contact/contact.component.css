@@ -1,0 +1,60 @@
+.contact{
+    padding:25px;
+}
+.col-md-3{
+    background-image:linear-gradient(rgb(20, 228, 255),rgb(253, 255, 196));
+    padding: 4%;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+.contact-info{
+    margin-top:10%;
+    color: rgb(20, 17, 199)!important;
+   
+    
+}
+.contact-info img{
+    margin-bottom: 15%;
+}
+.contact-info h2{
+    margin-bottom: 10%;
+}
+.col-md-9{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../../../assets/texture.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    color: wheat;
+    padding: 3%;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.contact-form label{
+    font-weight:60;
+}
+.contact-form button{
+    background-image: linear-gradient(rgb(17, 252, 17),rgb(26, 119, 26));
+    color: #fff;
+    font-weight: 600;
+    width: 35%;
+    
+}
+.contact-form button:hover{
+    background-image: linear-gradient(rgb(26, 141, 248),rgb(97, 43, 245));
+}
+
+.main{
+    background-image: url('../../../assets/1751008.webp');
+    background-size:cover;
+    background-attachment: fixed;
+}
+.row{
+    width: fit-content;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    margin: auto;
+}
+.mybtn{
+    display: flex;
+    justify-content: center;
+}

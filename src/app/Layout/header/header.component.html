@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <img src="../../../assets/retriver.jpg " class="logo">
+    <a id="paws">Paws makes your life better</a>
+    <!-- Toggle button-->
+    <a class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </a>
+  
+
+    <div class="navbar-collapse" >
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">Contact Us</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Service
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="/product">product category</a>
+            <a class="dropdown-item" routerLink="/get-product">product list</a>
+            <a class="dropdown-item" routerLink="/product-input">product input</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Join Us
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="/signin">Sign In</a>
+            <a class="dropdown-item" routerLink="/signup">Sign Up</a>
+            <a class="dropdown-item" (click)="onClicklogout()">logout</a>
+          </div>
+        </li>
+        
+      </ul>
+      
+    </div>
+
+</nav>
+  <router-outlet></router-outlet>

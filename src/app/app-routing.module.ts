@@ -20,11 +20,11 @@ const routes: Routes =
   {path:'about',component:AboutComponent},
   {path:'signin',component:SignInComponent},
   {path:'signup',component:SignUpComponent},
-  {path:'contact',component:ContactComponent,canActivate:[AuthGuard]},
-  {path:'product-input',component:ProductInputComponent},
+  {path:'contact',component:ContactComponent},
+  {path:'product-input',component:ProductInputComponent,canActivate:[AuthGuard]},
   {path:'get-product',component:GetProductComponent},
-  {path:'update/:id',component:UpdateComponent},
-  {path:'cart',component:CartComponent},
+  {path:'update/:id',component:UpdateComponent,canActivate:[AuthGuard]},
+  {path:'cart',component:CartComponent,canActivate:[AuthGuard]},
   {path:'**',component:PageNotFoundComponent}
 ];
 

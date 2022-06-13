@@ -10,7 +10,7 @@ import { SignInComponent } from './Components/Auth/sign-in/sign-in.component';
 import { SignUpComponent } from './Components/Auth/sign-up/sign-up.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './Components/contact/contact.component';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { PageNotFoundComponent } from './Layout/page-not-found/page-not-found.component';
 import { ProductInputComponent } from './Components/product-input/product-input.component';
 import { GetProductComponent } from './Components/get-product/get-product.component';

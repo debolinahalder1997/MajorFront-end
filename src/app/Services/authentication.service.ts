@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient,HttpErrorResponse,HttpParams,HttpRequest,HttpHeaders } from '@angular/common/http'
 import { Observable,throwError } from 'rxjs';
 import { Users } from '../Api_classes/users';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -24,7 +23,6 @@ export class AuthenticationService {
     return this.http.post<Users[]>(this.signinApi,formData)
 
   }
-  
 }
 
 

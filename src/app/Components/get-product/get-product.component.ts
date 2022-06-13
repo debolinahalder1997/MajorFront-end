@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient,HttpClientModule } from '@angular/common/http';
 import {ProductService} from '../../Services/product.service';
+import{CartService} from '../../Services/cart.service';
 import { Router } from '@angular/router';
+import jwt_decode from 'jwt-decode';
 @Component({
   selector: 'app-get-product',
   templateUrl: './get-product.component.html',
@@ -9,7 +11,21 @@ import { Router } from '@angular/router';
 })
 export class GetProductComponent implements OnInit {
 pdt=[];
-  constructor(private pdtservice:ProductService,private http: HttpClient,private Router:Router) { }
+  admin:boolean=false;
+  token = localStorage.getItem("token");
+  email = jwt_decode(this.token)['email'];
+
+  constructor(private pdtservice:ProductService,private cs:CartService,
+    private http: HttpClient,private Router:Router) { 
+     if(this.email=='Sriparna@gmail.com')
+     {
+      this.admin=true
+     }
+     else
+     {
+      this.admin=false;
+     }
+  }
  
   ngOnInit(): void {
     this.pdtservice.getproductData()
@@ -18,6 +34,7 @@ pdt=[];
      this.pdt=data.productdata;
 
     });
+    console.log(this.email);
   }
   Delete(pid)
   {
@@ -26,4 +43,39 @@ pdt=[];
      
   })
   }
-}
+  itemCart:any=[];
+  addtocart(item)
+  {
+    console.log(item);
+    let cartDataNull=localStorage.getItem('localCart');
+    if(cartDataNull==null)
+    {
+      let storeDataGet:any=[];
+      storeDataGet.push(item);
+      localStorage.setItem('localCart',JSON.stringify(storeDataGet));
+    }
+    else
+    {
+      var id=item._id;
+      let index:number =-1;
+      this.itemCart=JSON.parse(localStorage.getItem('localCart'));
+      for(let i=0;i<this.itemCart.length;i++)
+      {
+        if(parseInt(id)===parseInt(this.itemCart[i]._pid))
+        {
+          this.itemCart[i].qnty=item.qnty;
+        }
+      }
+      if(index==-1)
+      {
+        this.itemCart.push(item);
+        localStorage.setItem('localCart',JSON.stringify(this.itemCart));
+      }
+      else
+      {
+        localStorage.setItem('localCart',JSON.stringify(this.itemCart));
+      }
+    }
+    window.location.reload();
+  }
+ }

@@ -22,9 +22,11 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  loading=false;
+  buttionText:String;
   onSubmit():void {
     console.log(this.contact.value);
+    window.location.href="https://formspree.io/f/mqknjgqb";
   }
 
 }

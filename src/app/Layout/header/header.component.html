@@ -28,7 +28,6 @@
             Service
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" routerLink="/product">product category</a>
             <a class="dropdown-item" routerLink="/get-product">product list</a>
             <a class="dropdown-item" routerLink="/product-input">product input</a>
           </div>
@@ -51,7 +50,7 @@
         <li>        
           <div class="cart" routerLink="/cart">
           <i class="fas fa-cart-plus"></i>
-          <div style="font-size: 10px;" class="badge bg-danger"></div>
+          <div style="font-size: x-small;font-weight:bold;color: black;" class="badge bg-warning">{{cartItem}}</div>
           </div>
       </li>
 

@@ -26,6 +26,17 @@ export class HeaderComponent implements OnInit
   }
 
   ngOnInit(): void {
+    this.cartItemFunc();
   }
+  cartItem:number=0;
+  cartItemFunc(){
+    let cart=localStorage.getItem('localCart') 
+    if(cart!= null)
+    {
+      var cartCount = JSON.parse(localStorage.getItem('localCart'));
+      this.cartItem =cartCount.length;
+      // window.location.reload();
+    }
 
+  }
 }

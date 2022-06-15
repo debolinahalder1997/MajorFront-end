@@ -18,22 +18,33 @@ export class SignInComponent implements OnInit {
     private router:Router,
     private store:StorageService) {
       if (localStorage.getItem('token')) {
-        router.navigate(['/home']);
+        router.navigate(['/get-product']);
       }
      }
-
+loading:boolean=false;
+errorMessage:String;
   ngOnInit(): void { }
 loginResponse:any;
   loginForm(formValue:any){
     console.log("Inside signin component",formValue.value);
-
-    this.authService.postSignin(formValue.value).subscribe((response)=>{
-      console.log(response);
-      this.loginResponse = response
-      this.store.SetResponseFromLogin(this.loginResponse.token)
-      this.router.navigate(['/home'])
-      window.location.reload();
-    })
+    this.loading = true;
+    this.errorMessage = "you are not user please sign up before login.";
+    this.authService.postSignin(formValue.value).subscribe(
+      (response)=>
+      {
+        console.log(response);
+        this.loginResponse = response
+        this.store.SetResponseFromLogin(this.loginResponse.token)
+        this.router.navigate(['/get-product'])
+        window.location.reload();
+      },
+      (error)=>
+      {
+        console.error("you are not user please sign up before login.")
+        this.errorMessage
+        this.loading=false;
+      }
+    )
     }
 
 }

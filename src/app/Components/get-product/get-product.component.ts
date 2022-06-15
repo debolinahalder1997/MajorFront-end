@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient,HttpClientModule } from '@angular/common/http';
 import {ProductService} from '../../Services/product.service';
-import{CartService} from '../../Services/cart.service';
 import { Router } from '@angular/router';
 import jwt_decode from 'jwt-decode';
 @Component({
@@ -15,7 +14,7 @@ pdt=[];
   token = localStorage.getItem("token");
   email = jwt_decode(this.token)['email'];
 
-  constructor(private pdtservice:ProductService,private cs:CartService,
+  constructor(private pdtservice:ProductService,
     private http: HttpClient,private Router:Router) { 
      if(this.email=='Sriparna@gmail.com')
      {

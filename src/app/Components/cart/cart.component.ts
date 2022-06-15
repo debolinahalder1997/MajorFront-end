@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from 'src/app/Services/cart.service';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -9,10 +8,8 @@ export class CartComponent implements OnInit
 {
   public useradmin : any = [];
   
-  constructor(private cartService : CartService) { 
-    if (window.localStorage.getItem('token')) {
-      
-    }
+  constructor() { 
+   
   }
 
   ngOnInit(): void {

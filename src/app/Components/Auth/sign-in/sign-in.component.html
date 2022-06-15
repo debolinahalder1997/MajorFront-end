@@ -1,6 +1,6 @@
 <div class="section">
    <div class="container login_form" id="formstyle">
-
+        
       <br><h3>Sign In To Your Account</h3><br>
             
              <form #formValue="ngForm"  name="loginForm" (submit)="loginForm(formValue)" class="form-group">
@@ -10,6 +10,7 @@
                   </span>
                   <input type="email" ngModel name="email" #email="ngModel"  id="email" class="form__input" placeholder="Username" required>
                   <div class="alert alert-warning" role="alert" *ngIf="email.invalid && email.touched">This field is required.</div>
+                
                </div>
                <div class="row">
                   <span class="fa fa-lock"></span>
@@ -23,6 +24,7 @@
                <div class="row" id="submit">
                   <input type="submit" [disabled]="formValue.invalid" value="Submit" class="btn">
                </div>
+               <div role="alert" *ngIf="!loading">{{errorMessage}}</div>
             </form>
             <div class="row" id="row">
                <p>Don't have an account? <a routerLink="/signup">Register Here</a></p>
